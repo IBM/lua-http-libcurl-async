@@ -1,6 +1,6 @@
-# lua-async-http
+# lua-http-libcurl-async
 
-lua-async-http rock, is a new lua rock written in C and based on libcurl. It allow us to make multiple http/https (with client certificate) calls in parallel (non-blocking) and wait for their responses.
+lua-http-libcurl-async rock, is a new lua rock written in C and based on libcurl. It allow us to make multiple http/https (with client certificate) calls in parallel (non-blocking) and wait for their responses.
 
 In order to achieve such a behaviour, we've used the multi interface that libcurl has to offer. 
 
@@ -13,7 +13,6 @@ The rock required the following system packages in order to compile:
  2. libcurl-devel >= 7.34.0
 
 (TLS1.2 is supported since libcurl 7.34.0)
-QA env currently has libcurl *7.61.1-7.91.amzn1* installed by default.
 
 ## Lua Usage
 **Important** 
@@ -80,8 +79,6 @@ local res = async.request({
 	}
 })
 ```
-
-Take a look more [request examples](https://gitlab.haifa.ibm.com/pinpoint/lua_async_http/blob/master/tests/all-in-one.lua).
 
 ## Response
 The response object is being returned based on the given request **name**s. According the last request example, the response should return in the following structure: 
