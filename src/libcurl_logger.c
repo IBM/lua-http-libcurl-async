@@ -1,6 +1,12 @@
 #include "libcurl_async.h"
 
 /**
+* the buffer used for logger messages
+* Fix multiple definition of `logger_buffer' on link library
+**/
+char logger_buffer[LOGGER_BUFFER_SIZE];
+
+/**
  * :print_log
  * basicaly prints the log message to the machine
  * console stderr. those message could monitored later on.
