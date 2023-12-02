@@ -67,7 +67,6 @@ typedef struct {
   size_t       count;                     /* request count                                              */
 } request_handler;
 
-char logger_buffer[LOGGER_BUFFER_SIZE];   /* the buffer used for logger messages                        */
 
 /* ============================================= FUNCTIONS ============================================= */
 
